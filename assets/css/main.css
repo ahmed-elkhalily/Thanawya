@@ -3,7 +3,9 @@
 * {
   box-sizing: border-box;
 }
-*:focus, *:active, *:checked {
+*:focus,
+*:active,
+*:checked {
   outline: 0 !important;
   box-shadow: none !important;
 }
@@ -83,7 +85,7 @@ section.sec {
 
 @media (min-width: 320px) and (max-width: 567px) {
   body,
-html {
+  html {
     font-size: 1rem;
   }
 
@@ -536,16 +538,20 @@ footer .mainFooter-down .social-icons img {
 }
 footer .mainFooter-down .facebook:hover {
   border: red;
-  filter: invert(33%) sepia(6%) saturate(5290%) hue-rotate(183deg) brightness(99%) contrast(93%);
+  filter: invert(33%) sepia(6%) saturate(5290%) hue-rotate(183deg)
+    brightness(99%) contrast(93%);
 }
 footer .mainFooter-down .twitter:hover {
-  filter: invert(47%) sepia(77%) saturate(942%) hue-rotate(176deg) brightness(96%) contrast(98%);
+  filter: invert(47%) sepia(77%) saturate(942%) hue-rotate(176deg)
+    brightness(96%) contrast(98%);
 }
 footer .mainFooter-down .instagram:hover {
-  filter: invert(23%) sepia(82%) saturate(2291%) hue-rotate(292deg) brightness(92%) contrast(93%);
+  filter: invert(23%) sepia(82%) saturate(2291%) hue-rotate(292deg)
+    brightness(92%) contrast(93%);
 }
 footer .mainFooter-down .youtube:hover {
-  filter: invert(18%) sepia(67%) saturate(6426%) hue-rotate(356deg) brightness(99%) contrast(124%);
+  filter: invert(18%) sepia(67%) saturate(6426%) hue-rotate(356deg)
+    brightness(99%) contrast(124%);
 }
 
 @media (max-width: 568px) {
@@ -611,7 +617,9 @@ header.main-header h2 {
 * {
   box-sizing: border-box;
 }
-*:focus, *:active, *:checked {
+*:focus,
+*:active,
+*:checked {
   outline: 0 !important;
   box-shadow: none !important;
 }
@@ -691,7 +699,7 @@ section.sec {
 
 @media (min-width: 320px) and (max-width: 567px) {
   body,
-html {
+  html {
     font-size: 1rem;
   }
 
@@ -1144,16 +1152,20 @@ footer .mainFooter-down .social-icons img {
 }
 footer .mainFooter-down .facebook:hover {
   border: red;
-  filter: invert(33%) sepia(6%) saturate(5290%) hue-rotate(183deg) brightness(99%) contrast(93%);
+  filter: invert(33%) sepia(6%) saturate(5290%) hue-rotate(183deg)
+    brightness(99%) contrast(93%);
 }
 footer .mainFooter-down .twitter:hover {
-  filter: invert(47%) sepia(77%) saturate(942%) hue-rotate(176deg) brightness(96%) contrast(98%);
+  filter: invert(47%) sepia(77%) saturate(942%) hue-rotate(176deg)
+    brightness(96%) contrast(98%);
 }
 footer .mainFooter-down .instagram:hover {
-  filter: invert(23%) sepia(82%) saturate(2291%) hue-rotate(292deg) brightness(92%) contrast(93%);
+  filter: invert(23%) sepia(82%) saturate(2291%) hue-rotate(292deg)
+    brightness(92%) contrast(93%);
 }
 footer .mainFooter-down .youtube:hover {
-  filter: invert(18%) sepia(67%) saturate(6426%) hue-rotate(356deg) brightness(99%) contrast(124%);
+  filter: invert(18%) sepia(67%) saturate(6426%) hue-rotate(356deg)
+    brightness(99%) contrast(124%);
 }
 
 @media (max-width: 568px) {
@@ -1308,7 +1320,7 @@ footer .mainFooter-down .youtube:hover {
   display: none;
 }
 
-input[type=file] {
+input[type="file"] {
   color: rgba(0, 0, 0, 0);
 }
 
@@ -1382,7 +1394,10 @@ input[type=file] {
   color: white;
   font-family: courier, sans;
 }
-.school__classes .school__classes__items .school__classes__item [class*=col-] {
+.school__classes
+  .school__classes__items
+  .school__classes__item
+  [class*="col-"] {
   margin-bottom: -99999px;
   padding-bottom: 99999px;
 }
@@ -1537,7 +1552,7 @@ input[type=file] {
 .login-form form .btn-submit {
   font-size: 1rem;
 }
-.login-form form input[type=checkbox] {
+.login-form form input[type="checkbox"] {
   width: 30px;
   height: 16px;
 }
@@ -1608,12 +1623,12 @@ input[type=file] {
   .login-form form .btn-submit {
     font-size: 1rem;
   }
-  .login-form form input[type=checkbox] {
+  .login-form form input[type="checkbox"] {
     width: 30px;
     height: 20px;
   }
   .login-form form .checkbox,
-.login-form form .btn-forget {
+  .login-form form .btn-forget {
     font-size: 1rem;
   }
   .login-form form .modal .modal-dialog .modal-content .modal-header h5 {
@@ -1621,7 +1636,13 @@ input[type=file] {
     font-size: 1rem;
     color: #636363;
   }
-  .login-form form .modal .modal-dialog .modal-content .modal-header .btn-close {
+  .login-form
+    form
+    .modal
+    .modal-dialog
+    .modal-content
+    .modal-header
+    .btn-close {
     width: 1rem;
     height: 1rem;
   }
@@ -1641,7 +1662,9 @@ input[type=file] {
 * {
   box-sizing: border-box;
 }
-*:focus, *:active, *:checked {
+*:focus,
+*:active,
+*:checked {
   outline: 0 !important;
   box-shadow: none !important;
 }
@@ -1721,7 +1744,7 @@ section.sec {
 
 @media (min-width: 320px) and (max-width: 567px) {
   body,
-html {
+  html {
     font-size: 1rem;
   }
 
@@ -1742,7 +1765,6 @@ html {
   left: 0;
   right: 0;
   background: white;
-  z-index: 9999;
   box-shadow: 0px 0px 10px 0px rgba(83, 83, 83, 0.75);
 }
 .navbar .container {
@@ -2174,16 +2196,20 @@ footer .mainFooter-down .social-icons img {
 }
 footer .mainFooter-down .facebook:hover {
   border: red;
-  filter: invert(33%) sepia(6%) saturate(5290%) hue-rotate(183deg) brightness(99%) contrast(93%);
+  filter: invert(33%) sepia(6%) saturate(5290%) hue-rotate(183deg)
+    brightness(99%) contrast(93%);
 }
 footer .mainFooter-down .twitter:hover {
-  filter: invert(47%) sepia(77%) saturate(942%) hue-rotate(176deg) brightness(96%) contrast(98%);
+  filter: invert(47%) sepia(77%) saturate(942%) hue-rotate(176deg)
+    brightness(96%) contrast(98%);
 }
 footer .mainFooter-down .instagram:hover {
-  filter: invert(23%) sepia(82%) saturate(2291%) hue-rotate(292deg) brightness(92%) contrast(93%);
+  filter: invert(23%) sepia(82%) saturate(2291%) hue-rotate(292deg)
+    brightness(92%) contrast(93%);
 }
 footer .mainFooter-down .youtube:hover {
-  filter: invert(18%) sepia(67%) saturate(6426%) hue-rotate(356deg) brightness(99%) contrast(124%);
+  filter: invert(18%) sepia(67%) saturate(6426%) hue-rotate(356deg)
+    brightness(99%) contrast(124%);
 }
 
 @media (max-width: 568px) {
@@ -2361,7 +2387,7 @@ header.main-header h2 {
 
 @media (max-width: 768px) {
   .register div.btn__wrapper .btn__add,
-.register .btn-remove {
+  .register .btn-remove {
     margin-top: 0;
     margin-bottom: 1rem;
   }
@@ -2746,7 +2772,8 @@ img {
   color: #03a9f4;
   font-weight: bold;
 }
-.search__input:hover, .search__input:focus {
+.search__input:hover,
+.search__input:focus {
   padding: 12px 0;
   outline: 0;
   border: 1px solid transparent;
