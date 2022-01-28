@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Product Filter And Search</title>
+        <!-- Google Font -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Stylesheet -->
+        <!-- main-styles -->
+        <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css" />
+        <link rel="stylesheet" href="assets/css/slick-theme.css" />
+        <link rel="stylesheet" href="assets/css/slick.css" />
+        <!--style-->
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    <body>
+        <div class="wrapper container">
+            <div id="search-container">
+                <input
+                    type="search"
+                    id="search-input"
+                    class="search-input"
+                    placeholder="ادخل اسم المعلم"
+                />
+                <button id="search">ابحث</button>
+            </div>
+            <div class="checkboxs row">
+                <div class="col-md-2">
+                    <ul class="subject-checkbox">
+                        <label class="choose">اختر المادة</label>
+                        <li>
+                            <input
+                                type="checkbox"
+                                name="group1[]"
+                                class="button-value"
+                                onclick="filterProduct('all')"
+                            />
+                            <label for="cb1">كل المواد</label>
+                        </li>
+                        <li>
+                            <input
+                                type="checkbox"
+                                name="group1[]"
+                                class="button-value"
+                                onclick="filterProduct('الفيزياء')"
+                            />
+                            <label for="cb1">الفيزياء</label>
+                        </li>
+                        <li>
+                            <input
+                                type="checkbox"
+                                name="group1[]"
+                                class="button-value"
+                                onclick="filterProduct('التاريخ')"
+                            />
+                            <label for="cb2">التاريخ</label>
+                        </li>
+                        <li>
+                            <input
+                                type="checkbox"
+                                name="group1[]"
+                                class="button-value"
+                                onclick="filterProduct('الرياضيات')"
+                            />
+                            <label for="cb3">الرياضيات</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul class="grade-checkbox">
+                        <label class="choose">اختر الصف</label>
+                        <li>
+                            <input
+                                type="checkbox"
+                                name="group1[]"
+                                class="button-value2"
+                                onclick="filterGrade('الأول')"
+                            />
+                            <label for="cb3">الصف الأول الثانوي</label>
+                        </li>
+                        <li>
+                            <input
+                                type="checkbox"
+                                name="group1[]"
+                                class="button-value2"
+                                onclick="filterGrade('الثاني')"
+                            />
+                            <label for="cb5">الصف الثاني الثانوي</label>
+                        </li>
+                        <li>
+                            <input
+                                type="checkbox"
+                                name="group1[]"
+                                class="button-value2"
+                                onclick="filterGrade('الثالث')"
+                            />
+                            <label for="cb6">الصف الثالث الثانوي</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul class="Area-checkbox">
+                        <label class="choose">اختر المحافظة</label>
+                        <li>
+                            <input
+                                type="checkbox"
+                                name="group1[]"
+                                class="button-value"
+                                onclick="filterArea('all')"
+                            />
+                            <label for="cb7">جميع المحافظات</label>
+                        </li>
+                        <li>
+                            <input
+                                type="checkbox"
+                                name="group1[]"
+                                class="button-value3"
+                                onclick="filterArea('القاهرة')"
+                            />
+                            <label for="cb8">القاهرة</label>
+                        </li>
+                        <li>
+                            <input
+                                type="checkbox"
+                                name="group1[]"
+                                class="button-value3"
+                                onclick="filterArea('الاسكندرية')"
+                            />
+                            <label for="cb9">الاسكندرية</label>
+                        </li>
+                        <li>
+                            <input
+                                type="checkbox"
+                                name="group3[]"
+                                class="button-value"
+                                onclick="filterArea('الجيزة')"
+                            />
+                            <label for="cb9">الجيزة</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul class="location-checkbox">
+                        <label class="choose">اختر المنطقه/المركز</label>
+                        <li>
+                            <input
+                                type="checkbox"
+                                name="group1[]"
+                                class="button-value3"
+                                onclick="filterArea('all')"
+                            />
+                            <label for="cb8">جميع المناطق</label>
+                        </li>
+
+                        <li>
+                            <input
+                                type="checkbox"
+                                name="group1[]"
+                                class="button-value4"
+                                onclick="filterLocation('مدينةنصر')"
+                            />
+                            <label for="cb9">مدينة نصر</label>
+                        </li>
+                        <li>
+                            <input
+                                type="checkbox"
+                                name="group1[]"
+                                class="button-value4"
+                                onclick="filterLocation('المعادى')"
+                            />
+                            <label for="cb10">المعادى</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul class="location-checkbox">
+                        <label class="choose">اختر المدرسة/السنتر</label>
+                        <li>
+                            <input
+                                type="checkbox"
+                                name="group1[]"
+                                class="button-value5"
+                                onclick="filterCenter('all')"
+                            />
+                            <label for="cb8">جميع المدارس /السناتر</label>
+                        </li>
+
+                        <li>
+                            <input
+                                type="checkbox"
+                                name="group1[]"
+                                class="button-value5"
+                                onclick="filterCenter('سنترمكة')"
+                            />
+                            <label for="cb9">سنتر مكة</label>
+                        </li>
+                        <li>
+                            <input
+                                type="checkbox"
+                                name="group1[]"
+                                class="button-value5"
+                                onclick="filterCenter('بسملة')"
+                            />
+                            <label for="cb10">سنتر بسملة</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="teachers" class="row justify-content-center"></div>
+        </div>
+        <!-- scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/slick.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/index.js"></script>
+        <script src="assets/js/slider.js"></script>
+        <script src="assets/js/teachers.js"></script>
+    </body>
+</html>

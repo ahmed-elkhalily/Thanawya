@@ -1,0 +1,125 @@
+@import "../shared/variables";
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: "cairo", sans-serif;
+}
+body {
+    background-color: #f5f8ff;
+}
+.wrapper {
+    width: 95%;
+    margin: 0 auto;
+}
+#search-container {
+    margin: 1em 0;
+}
+#search-container input {
+    background-color: transparent;
+    width: 40%;
+    border-bottom: 2px solid #110f29;
+    padding: 1em 0.3em;
+}
+#search-container input:focus {
+    border-bottom-color: $primary;
+}
+#search-container button {
+    padding: 1em 2em;
+    margin-left: 1em;
+    background-color: $primary;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-top: 0.5em;
+}
+.button-value {
+    border: 2px solid $primary;
+    padding: 1em 2.2em;
+    border-radius: 3em;
+    background-color: transparent;
+    color: $primary;
+    cursor: pointer;
+}
+
+#teachers {
+    display: flex;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 1em;
+    padding: 2em 0;
+}
+.card {
+    background-color: #ffffff;
+    max-width: 18em;
+    margin-top: 1em;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 1em 2em 2.5em rgba(1, 2, 68, 0.08);
+}
+h6,
+h5 {
+    text-align: center;
+}
+.image-container {
+    text-align: center;
+}
+img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.teacher-followers {
+    background-color: $primary;
+    color: white;
+    border: 1px solid $primary;
+    width: 6rem;
+    height: 3rem;
+    border-radius: 1rem;
+    margin-inline-end: 0.5rem;
+}
+
+.teacher-questions {
+    background-color: #519259;
+    color: white;
+    border: 1px solid #519259;
+    width: 6rem;
+    height: 3rem;
+    border-radius: 1rem;
+}
+.container {
+    padding-top: 1em;
+    color: #110f29;
+}
+.container h5 {
+    font-weight: 500;
+}
+.hide {
+    display: none;
+}
+
+.choose {
+    font-size: 16px;
+    width: 10rem;
+    height: 2rem;
+    color: #fff;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 1rem;
+    background-color: $primary;
+}
+@media screen and (max-width: 720px) {
+    img {
+        max-width: 100%;
+        object-fit: contain;
+        height: 10em;
+    }
+    .card {
+        max-width: 10em;
+        margin-top: 1em;
+    }
+    #teachers {
+        grid-template-columns: auto auto;
+        grid-column-gap: 1em;
+    }
+}

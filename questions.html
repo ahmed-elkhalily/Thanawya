@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questions</title>
+    <!-- main-styles -->
+    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="assets/css/slick-theme.css" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <!--style-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/file-upload-with-preview@4.1.0/dist/file-upload-with-preview.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <div class="page-content">
+      <section class="sec questions">
+        <div class="container">
+          <header class="main-header">
+            <span></span>
+            <h2>إنشاء أمتحان جديد</h2>
+          </header>
+          <div class="questions">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="question__field">
+                  <label class="mb-2" for="unit">أختر الوحدة</label>
+                  <select name="" id="unit" class="form-control">
+                    <option value="first">الوحدة الأولي</option>
+                    <option value="second">الوحدة الثانية</option>
+                    <option value="third">الوحدة الثالثة</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="question__field">
+                  <label class="mb-2" for="subject">عنوان محتوي الأمتحان</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="subject"
+                    placeholder="أكتب عنوان الأمتحان"
+                  />
+                </div>
+              </div>
+            </div>
+            <hr class="mt-4 mb-3" />
+            <div class="questions__main row">
+              <header class="main-header sub-header">
+                <span></span>
+                <h5>سؤال رئيسي</h5>
+              </header>
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="home-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#home"
+                    type="button"
+                    role="tab"
+                    aria-controls="home"
+                    aria-selected="true"
+                  >
+                    إضافة نص
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="profile-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#profile"
+                    type="button"
+                    role="tab"
+                    aria-controls="profile"
+                    aria-selected="false"
+                  >
+                    إضافة صورة
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="home"
+                  role="tabpanel"
+                  aria-labelledby="home-tab"
+                >
+                  <div class="question__field mt-3">
+                    <label class="mb-2" for="question">إضافة نص</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="question"
+                      placeholder="أضافة نص للسؤال"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="profile"
+                  role="tabpanel"
+                  aria-labelledby="profile-tab"
+                >
+                  <div class="question__field mt-3">
+                    <div
+                      class="custom-file-container"
+                      data-upload-id="myUniqueUploadId"
+                    >
+                      <label
+                        for="file-upload-for-label-click1"
+                        class="w-100 mb-2"
+                      >
+                        <div class="d-flex justify-content-between">
+                          <div style="cursor: pointer">إضافة صورة</div>
+                          <a
+                            href="javascript:void(0)"
+                            class="custom-file-container__image-clear"
+                            title="Clear Image"
+                          >
+                            <i
+                              class="fas fa-trash-alt"
+                              style="color: #f44336"
+                            ></i>
+                          </a>
+                        </div>
+                      </label>
+                      <label
+                        style="display: none"
+                        class="custom-file-container__custom-file"
+                      >
+                        <input
+                          type="file"
+                          id="file-upload-for-label-click1"
+                          class="custom-file-container__custom-file__custom-file-input"
+                          accept="*"
+                          multiple
+                          aria-label="Choose File"
+                        />
+                        <input
+                          type="hidden"
+                          name="MAX_FILE_SIZE"
+                          value="10485760"
+                        />
+                        <span
+                          class="custom-file-container__custom-file__custom-file-control"
+                        ></span>
+                      </label>
+                      <div
+                        class="custom-file-container__image-preview"
+                        style="height: 150px; margin: 0"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="btn__wrapper">
+                <button class="btn btn__add-main" id="add-main-question">
+                  إضافة سؤال أساسي
+                </button>
+              </div>
+            </div>
+            <div id="main-question"></div>
+            <hr class="mt-2 mb-3" />
+            <div class="questions__main row">
+              <header class="main-header sub-header">
+                <span></span>
+                <h5>سؤال فرعي</h5>
+              </header>
+              <div class="col-md-6">
+                <div class="question__field">
+                  <label class="mb-2" for="question">إضافة نص</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="question"
+                    placeholder="أضافة نص للسؤال"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="question__field">
+                  <div
+                    class="custom-file-container"
+                    data-upload-id="myUniqueUploadId2"
+                  >
+                    <label
+                      for="file-upload-for-label-click1"
+                      class="w-100 mb-2"
+                    >
+                      <div class="d-flex justify-content-between">
+                        <div style="cursor: pointer">إضافة صورة</div>
+                        <a
+                          href="javascript:void(0)"
+                          class="custom-file-container__image-clear"
+                          title="Clear Image"
+                        >
+                          <i
+                            class="fas fa-trash-alt"
+                            style="color: #f44336"
+                          ></i>
+                        </a>
+                      </div>
+                    </label>
+                    <label
+                      style="display: none"
+                      class="custom-file-container__custom-file"
+                    >
+                      <input
+                        type="file"
+                        id="file-upload-for-label-click1"
+                        class="custom-file-container__custom-file__custom-file-input"
+                        accept="*"
+                        multiple
+                        aria-label="Choose File"
+                      />
+                      <input
+                        type="hidden"
+                        name="MAX_FILE_SIZE"
+                        value="10485760"
+                      />
+                      <span
+                        class="custom-file-container__custom-file__custom-file-control"
+                      ></span>
+                    </label>
+                    <div
+                      class="custom-file-container__image-preview"
+                      style="height: 150px; margin: 0"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="question__field">
+                <label class="mb-2" for="answer">إضافة إجابة</label>
+                <select
+                  name="options"
+                  id="answers"
+                  class="form-control form-select"
+                >
+                  <option value="first">الإجابة الأولي</option>
+                  <option value="second">الإجابةالثانية</option>
+                  <option value="third">الإجابة الثالثة</option>
+                  <option value="fourth">الإجابة الثالثة</option>
+                </select>
+              </div>
+              <div class="question__field">
+                <label class="mb-2" for="add-note">إضافة طريقة حل</label>
+                <textarea
+                  name="add-answer"
+                  id="add-note"
+                  class="form-control"
+                  placeholder="من فضلك أدخل طريقة حل"
+                ></textarea>
+              </div>
+
+              <div class="btn__wrapper">
+                <button class="btn btn__add-sec">إضافة سؤال فرعي</button>
+              </div>
+            </div>
+            <div id="sec-question"></div>
+            <div class="questions__btns-wrapper">
+              <button class="btn btn-secondary">
+                مشاهدة الإختبار قبل النشر
+              </button>
+              <button class="btn btn-danger">أضغط هنا لنشر الإختبار</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-filestyle.min.js"></script>
+    <script src="https://unpkg.com/file-upload-with-preview@4.1.0/dist/file-upload-with-preview.min.js"></script>
+    <script>
+      var upload = new FileUploadWithPreview("myUniqueUploadId");
+      var upload = new FileUploadWithPreview("myUniqueUploadId2");
+      let main_template = `
+          <div class="questions__main row">
+            <header class="main-header sub-header">
+              <span></span>
+              <h5>سؤال رئيسي</h5>
+            </header>
+            <div class="col-md-6">
+              <div class="question__field">
+                <label class="mb-2" for="question">إضافة نص</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="question"
+                  placeholder="أضافة نص للسؤال"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="question__field">
+                <label class="mb-2" for="question-file">إضافة صورة</label>
+                <div class="add-image">
+                  <input
+                    id="imgInp"
+                    accept="image/*"
+                    type="file"
+                    class="custom-file-input form-control"
+                  />
+                  <img
+                    class="image-preview"
+                    id="imagePreview"
+                    src="#"
+                    alt="your image"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="btn__wrapper">
+              <button class="btn btn__add-main">إضافة سؤال أساسي</button>
+            </div>
+          </div>
+        `;
+
+      let sec_template = `
+          <div class="questions__main row">
+            <header class="main-header sub-header">
+              <span></span>
+              <h5>سؤال فرعي</h5>
+            </header>
+            <div class="col-md-6">
+              <div class="question__field">
+                <label class="mb-2" for="question">إضافة نص</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="question"
+                  placeholder="أضافة نص للسؤال"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="question__field">
+                <label class="mb-2" for="question-file">إضافة صورة</label>
+                <div class="add-image">
+                  <input
+                    id="imgInp"
+                    accept="image/*"
+                    type="file"
+                    class="custom-file-input form-control"
+                  />
+                  <img
+                    class="image-preview"
+                    id="imagePreview"
+                    src="#"
+                    alt="your image"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="question__field">
+              <label class="mb-2" for="answer">إضافة إجابة</label>
+              <select
+                name="options"
+                id="answers"
+                class="form-control form-select"
+              >
+                <option value="first">الإجابة الأولي</option>
+                <option value="second">الإجابةالثانية</option>
+                <option value="third">الإجابة الثالثة</option>
+                <option value="fourth">الإجابة الثالثة</option>
+              </select>
+            </div>
+            <div class="question__field">
+              <label class="mb-2" for="add-note">إضافة طريقة حل</label>
+              <textarea
+                name="add-answer"
+                id="add-note"
+                class="form-control"
+                placeholder="من فضلك أدخل طريقة حل"
+              ></textarea>
+            </div>
+
+            <div class="btn__wrapper">
+              <button class="btn btn__add-sec">إضافة سؤال فرعي</button>
+            </div>
+
+          </div>
+`;
+
+      $(document).on("click", ".btn__add-main", function () {
+        $("#main-question").append(main_template);
+      });
+
+      $(document).on("click", ".btn__add-sec", function () {
+        $("#sec-question").append(sec_template);
+      });
+    </script>
+  </body>
+</html>

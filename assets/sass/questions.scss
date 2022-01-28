@@ -1,0 +1,16 @@
+.questions {
+  .sub-header {
+    justify-content: flex-start !important;
+    margin-bottom: 1rem !important;
+  }
+  &__main {
+    .btn__wrapper {
+      display: flex;
+      flex-direction: row-reverse;
+      margin-top: 1rem;
+      button.btn.btn__add-main {
+        background: $blue !important;
+      }
+    }
+  }
+}
